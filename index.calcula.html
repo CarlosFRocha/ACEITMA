@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<style>
+    input{font-family: Verdana;text-align: center; font-family: Verdana; font-size: large;}
+    label{font-family: Verdana; font-weight: bolder; font-size: 22PX;}
+    button{background-color: rgb(129, 255, 156);font-family: Verdana;font-weight: bolder; font-size: 19px;}
+    p{font-family: Verdana;font-weight: bolder;}
+</style>
+<body>
+    <table border="2"><tr><th style="background-color: yellow;">
+    <div style="font-family: Verdana; font-size: 41px; margin-left: 6%; font-weight: bolder;">ACE - ITINGA/MA</div>
+    </table></th></tr>
+<div>
+    <table border="2" style="background-color: rgb(225, 228, 255);"><tr>
+    <th><h1 style="font-family: Verdana; font-size: 25PX; color: red;">DEPÓSITOS CILÍNDRICOS:</h1>
+    <label for="raio1">Diâmetro (dm):</label>
+    <input type="number" min="0" max="100" name="raio1" id="raio1"><br><br>
+    <label for="altura">Altura (dm):</label>
+    <input type="number" min="0" max="100" name="altura" id="altura"><br><br>
+    <button onclick="soma()">Resultado</button>
+    <p style="font-size: 20px;" id="resultado"></p>
+    <button onclick="zerar()">LIMPAR</button></th></tr>
+</div> 
+<div>
+    <tr>
+     <th><h1 style="font-family: Verdana; font-size: 25px; color: red;">DEPÓSITOS RETANGULARES:</h1>
+    <label for="comprimento">Comprimento (dm):</label>
+    <input type="number" min="0" max="100" name="comprimento" id="comprimento"><br><br>
+    <label for="largura">Largura (dm):</label>
+    <input type="number" min="0" max="100" name="largura" id="largura"><br><br>
+    <label for="altura2">Altura (dm):</label>
+    <input type="number" min="0" max="100" name="altura2" id="altura2"><br>
+    <p><button onclick="soma1()">Resultado</button></p>
+    <p style="font-size: 20px;" id="resultado1"></p>
+    <button onclick="zerar1()">LIMPAR</button></th></tr></th></tr>
+    <tr>
+</div>
+<div>
+    <th><h1 style="font-family: Verdana; font-size: 25px;color: red;">DEPÓSITOS TRIANGULARES:</h1>
+    <label for="base">Base (dm):</label>
+    <input type="number" min="0" max="100" name="base" id="base"><br><br>
+    <label for="largura">Largura (dm):</label>
+    <input type="number" min="0" max="100" name="largura" id="largura1"><br><br>
+    <label for="altura">Altura (dm):</label>
+    <input type="number" min="0" max="100" name="altura" id="altura1"><br><br>
+    <button onclick="soma2()">Resultado</button>
+    <p style="font-size: 20px;" id="resultado2"></p>
+    <button onclick="zerar2()">LIMPAR</button></th></tr></th></tr>
+</div>
+    </table>
+<div>
+    <script> 
+        function  soma(){
+            let raio1 = document.getElementById("raio1").value;
+            let altura = document.getElementById("altura").value;
+            let soma = raio1*raio1*(altura *0.8)
+            document.getElementById("resultado").innerHTML = "Litros:"+soma}
+    </script>
+</div>
+<div>
+    <script>
+        function soma1(){
+            let comprimento = document.getElementById("comprimento").value;
+            let largura = document.getElementById("largura").value;
+            let altura2 = document.getElementById("altura2").value;
+            let soma1 = comprimento*largura*altura2;
+            document.getElementById("resultado1").innerHTML = "Litros:" +soma1};
+     </script>
+</div>
+<div>
+    <script>
+        function soma2(){
+            let base = document.getElementById("base").value;
+            let largura1 = document.getElementById("largura1").value;
+            let altura1 = document.getElementById("altura1").value;
+            let soma2 = base*largura1*(altura1 /2);
+            document.getElementById("resultado2").innerHTML = "Litros:" +soma2};
+    </script>
+</div>
+<div>
+    <script>
+        function zerar(){
+     document.getElementById("resultado",).innerHTML = "Resultado:";}
+    </script>
+</div>
+<div>
+    <script>
+        function zerar1(){
+     document.getElementById("resultado1").innerHTML = "Resultado:";}
+    </script>
+</div>
+<div>
+    <script>
+        function zerar2(){
+     document.getElementById("resultado2").innerHTML = "Resultado:";}
+    </script>
+</div>
+<div>
+    <tr><th><a style="color: blue; font-family: Verdana; font-size: 120%; margin-left: 6%;" href="index.page1.html"><b>VOLTAR PARA O INICIO</b></a></th></tr>
+    <br><footer style="margin-left: 4%; font-family: Verdana; font-size: 17px; font-weight: bolder; color: blue;">Criado por: CARLOS DE FREITAS ROCHA</footer>
+</div>    
+</body>
+</html>
